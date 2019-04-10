@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <com.roughike.swipeselector.SwipeSelector
+        android:id="@+id/eachMealselector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        app:swipe_descriptionGravity="center"
+        app:swipe_indicatorActiveColor="@color/swipe_selector_active_color"
+        app:swipe_indicatorInActiveColor="@color/swipeselector_color_indicator_inactive"
+        app:swipe_indicatorMargin="12dp"
+        app:swipe_indicatorSize="10dp"
+        app:swipe_leftButtonResource="@null"
+        app:swipe_rightButtonResource="@null"
+        android:padding="5dp"
+        android:layout_below="@id/delete_button"
+       >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/eachMealViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+           />
+
+    </com.roughike.swipeselector.SwipeSelector>
+
+    <ImageButton
+        android:id="@+id/take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_camera" />
+
+    <ImageButton
+        android:id="@+id/close_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_close_dark" />
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/ic_menu_delete" />
+
+</RelativeLayout>
